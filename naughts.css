@@ -1,0 +1,36 @@
+#bootstrap-overrides {
+  background-color: linen;
+}
+
+#bootstrap-overrides h1 {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 1em;
+  color: #808080;
+  margin-bottom: 20px;
+}
+
+#bootstrap-overrides span {
+    font-size: 2em;
+    color: #808080;
+}
+
+h1 {
+  text-align: center;
+}
+
+.game-board {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.one, .two, .three {
+  float: left;
+  display: inline-block;
+  width: 32%;
+  padding-bottom: 15%;
+  padding-top: 15%;
+  margin: 1px;
+  background-color: darksalmon;
+  text-align: center;
+}
