@@ -4,18 +4,20 @@
 
 #bootstrap-overrides h1 {
   font-family: 'Droid Sans', sans-serif;
-  font-size: 1em;
+  font-size: 2em;
   color: #808080;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 #bootstrap-overrides span {
-    font-size: 2em;
+    font-size: 1em;
     color: #808080;
 }
 
-h1 {
-  text-align: center;
+input {
+  display: inline-block;
+  width: 50%;
 }
 
 .game-board {
@@ -27,7 +29,7 @@ h1 {
 .one, .two, .three {
   float: left;
   display: inline-block;
-  width: 32%;
+  width: 30%;
   padding-bottom: 15%;
   padding-top: 15%;
   margin: 1px;
