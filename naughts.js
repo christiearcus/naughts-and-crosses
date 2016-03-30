@@ -5,9 +5,9 @@ var playerX = 0;
 var playerO = 0;
 
 var gameGrid = [
-  "", "", "",
-  "", "", "",
-  "", "", ""
+  "e", "e", "e",
+  "e", "e", "e",
+  "e", "e", "e"
 ];
 
 document.getElementById('player-X').innerText = ' ' + playerX;
@@ -50,25 +50,50 @@ gameBoardUI.addEventListener('click', function(event) {
 });
 
 var winner = function() {
-  if (gameGrid.indexOf("X") === "[0,1,2]") {
-    console.log('X is the winner of this game');
-    playerX ++;
-    document.getElementById('player-X').innerText = playerX;
-    clearBoard();
-    endGame();
-    startRound();
+
+    var gameString = gameGrid.join("");
+
+    if (
+      (gameString[0] == "X") && (gameString[1] == "X") && (gameString[2] == "X") ||
+      (gameString[2] == "X") && (gameString[4] == "X") && (gameString[6] == "X") ||
+      (gameString[0] == "X") && (gameString[4] == "X") && (gameString[8] == "X") ||
+      (gameString[3] == "X") && (gameString[4] == "X") && (gameString[5] == "X") ||
+      (gameString[0] == "X") && (gameString[3] == "X") && (gameString[6] == "X") ||
+      (gameString[6] == "X") && (gameString[7] == "X") && (gameString[8] == "X") ||
+      (gameString[1] == "X") && (gameString[4] == "X") && (gameString[7] == "X") ||
+      (gameString[2] == "X") && (gameString[5] == "X") && (gameString[8] == "X")) {
+        console.log('X is the winner of this game');
+        playerX ++;
+        document.getElementById('player-X').innerText = playerX;
+        clearBoard();
+        endGame();
+        startRound();
+    }
+
+    else if (
+      (gameString[0] == "O") && (gameString[1] == "O") && (gameString[2] == "O") ||
+      (gameString[2] == "O") && (gameString[4] == "O") && (gameString[6] == "O") ||
+      (gameString[0] == "O") && (gameString[4] == "O") && (gameString[8] == "O") ||
+      (gameString[3] == "O") && (gameString[4] == "O") && (gameString[5] == "O") ||
+      (gameString[0] == "O") && (gameString[3] == "O") && (gameString[6] == "O") ||
+      (gameString[6] == "O") && (gameString[7] == "O") && (gameString[8] == "O") ||
+      (gameString[1] == "O") && (gameString[4] == "O") && (gameString[7] == "O") ||
+      (gameString[2] == "O") && (gameString[5] == "O") && (gameString[8] == "O")) {
+        console.log('O is the winner of this game');
+        playerO ++;
+        document.getElementById('player-O').innerText = playerO;
+        clearBoard();
+        endGame();
+        startRound();
+    }
+
+    else if (gameGrid.indexOf('e') == -1) {
+      console.log("It's a draw!");
   }
   else {
-    return console.log('no winner yet!')
-  };
+    console.log('no winner yet!');
+  }
 };
-
-// [2,4,6]
-// [0,4,8]
-// [0,1,2]
-// [0,3,6]
-// [6,7,8]
-// [2,5,8]
 
 // clear board
 
