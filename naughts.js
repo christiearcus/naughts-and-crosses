@@ -1,4 +1,4 @@
-// globals.
+// globals
 
 var move = ""
 var playerX = 0;
@@ -13,7 +13,7 @@ var gameGrid = [
 document.getElementById('player-X').innerText = ' ' + playerX;
 document.getElementById('player-O').innerText = ' ' + playerO;
 
-// switch player;
+// get a random player to begin with
 
 var startRound = function() {
   var addtoDiv = document.getElementById('starter');
@@ -45,61 +45,45 @@ gameBoardUI.addEventListener('click', function(event) {
       event.target.innerText = move;
       gameGrid[index] = move;
       move = 'X';
-      winner();
+      winner('O');
     }
 });
 
-var winner = function() {
+// Check for winner
+// for loop to check how many in a row? Might work for horizontals
 
-    var gameString = gameGrid.join("");
-
+var winner = function(winCheck) {
+  var gameString = gameGrid.join("");
     if (
-      (gameString[0] == "X") && (gameString[1] == "X") && (gameString[2] == "X") ||
-      (gameString[2] == "X") && (gameString[4] == "X") && (gameString[6] == "X") ||
-      (gameString[0] == "X") && (gameString[4] == "X") && (gameString[8] == "X") ||
-      (gameString[3] == "X") && (gameString[4] == "X") && (gameString[5] == "X") ||
-      (gameString[0] == "X") && (gameString[3] == "X") && (gameString[6] == "X") ||
-      (gameString[6] == "X") && (gameString[7] == "X") && (gameString[8] == "X") ||
-      (gameString[1] == "X") && (gameString[4] == "X") && (gameString[7] == "X") ||
-      (gameString[2] == "X") && (gameString[5] == "X") && (gameString[8] == "X")) {
-        console.log('X is the winner of this game');
+      (gameString[0] == winCheck) && (gameString[1] == winCheck) && (gameString[2] == winCheck) ||
+      (gameString[2] == winCheck) && (gameString[4] == winCheck) && (gameString[6] == winCheck) ||
+      (gameString[0] == winCheck) && (gameString[4] == winCheck) && (gameString[8] == winCheck) ||
+      (gameString[3] == winCheck) && (gameString[4] == winCheck) && (gameString[5] == winCheck) ||
+      (gameString[0] == winCheck) && (gameString[3] == winCheck) && (gameString[6] == winCheck) ||
+      (gameString[6] == winCheck) && (gameString[7] == winCheck) && (gameString[8] == winCheck) ||
+      (gameString[1] == winCheck) && (gameString[4] == winCheck) && (gameString[7] == winCheck) ||
+      (gameString[2] == winCheck) && (gameString[5] == winCheck) && (gameString[8] == winCheck)) {
+        console.log(winCheck + ' is the winner of this game');
         playerX ++;
         document.getElementById('player-X').innerText = playerX;
         clearBoard();
         endGame();
         startRound();
-    }
-
-    else if (
-      (gameString[0] == "O") && (gameString[1] == "O") && (gameString[2] == "O") ||
-      (gameString[2] == "O") && (gameString[4] == "O") && (gameString[6] == "O") ||
-      (gameString[0] == "O") && (gameString[4] == "O") && (gameString[8] == "O") ||
-      (gameString[3] == "O") && (gameString[4] == "O") && (gameString[5] == "O") ||
-      (gameString[0] == "O") && (gameString[3] == "O") && (gameString[6] == "O") ||
-      (gameString[6] == "O") && (gameString[7] == "O") && (gameString[8] == "O") ||
-      (gameString[1] == "O") && (gameString[4] == "O") && (gameString[7] == "O") ||
-      (gameString[2] == "O") && (gameString[5] == "O") && (gameString[8] == "O")) {
-        console.log('O is the winner of this game');
-        playerO ++;
-        document.getElementById('player-O').innerText = playerO;
+      }
+      else if (gameGrid.indexOf('e') == -1) {
+        console.log("draw");
         clearBoard();
-        endGame();
-        startRound();
-    }
-
-    else if (gameGrid.indexOf('e') == -1) {
-      console.log("It's a draw!");
-  }
-  else {
-    console.log('no winner yet!');
-  }
+      }
+      else {
+        console.log('no winner yet');
+      }
 };
 
 // clear board
 
 var clearBoard = function() {
   for (var i = 0; i < gameGrid.length; i ++) {
-    gameGrid[i] = "";
+    gameGrid[i] = "e";
     document.getElementById([i]).innerText = "";
   };
 };
