@@ -18,4 +18,4 @@ I also played around with flex-boxes for the game-grid, but in the end ran out o
 
 ### Wireframe
 
-![Wireframe](wireframe.jpg)
+Please see the wireframe in the same folder directory.
