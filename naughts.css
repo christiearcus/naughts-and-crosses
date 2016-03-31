@@ -70,7 +70,9 @@ p {
 }
 
 .play-box {
-  background-color: #c7254e;
+  background: #c7254e;
+  background: linear-gradient(#c7254e, #FF5252);
+
 }
 
 .title {
