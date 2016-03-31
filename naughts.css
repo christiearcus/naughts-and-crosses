@@ -128,7 +128,7 @@ p {
 }
 
 /*Up to iPhone 6+*/
-@media (max-width: 414px) {
+@media (max-width: 415px) {
   #bootstrap-overrides h1 {
     padding: 20px;
     text-align: center;
