@@ -35,14 +35,15 @@ startRound();
 var gameBoardUI = document.getElementById('game-board');
 gameBoardUI.addEventListener('click', function(event) {
   var index = Number(event.target.id);
+  var index2 = event.target.id;
     if (move === 'X') {
-      event.target.innerText = move;
+      document.getElementById(index2).className = "col fa fa-fighter-jet fa-3x fa-spin";
       gameGrid[index] = move;
       move = 'O';
-      winner();
+      winner('X');
     }
-    else {
-      event.target.innerText = move;
+    else if (move === 'O'){
+      document.getElementById(index2).className = "col fa fa-rocket fa-3x fa-spin";
       gameGrid[index] = move;
       move = 'X';
       winner('O');
@@ -84,7 +85,7 @@ var winner = function(winCheck) {
 var clearBoard = function() {
   for (var i = 0; i < gameGrid.length; i ++) {
     gameGrid[i] = "e";
-    document.getElementById([i]).innerText = "";
+    document.getElementById([i]).className = "col";
   };
 };
 
