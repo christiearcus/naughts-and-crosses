@@ -87,6 +87,11 @@ p {
   margin: 2px;
   background-color: #f9f2f4;
   text-align: center;
+  color: cadetblue;
+}
+
+.fa-fighter-jet {
+  color: darksalmon;
 }
 
 .top-row {
