@@ -108,10 +108,12 @@ var clearBoard = function() {
 
 var endGame = function() {
   if (playerX === 3) {
-    alert('Player X is the ultimate champ!');
+    // alert('Player X is the ultimate champ!');
+    window.location.reload();
   }
   else if (playerO === 3) {
-    alert('Player O is the ultimate champ!');
+    // alert('Player O is the ultimate champ!');
+    window.location.reload();
   }
   else {
     return;
