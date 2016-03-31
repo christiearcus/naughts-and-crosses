@@ -1,30 +1,154 @@
-#bootstrap-overrides {
+#bootstrap-overrides header {
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: linen;
+  padding-left: 20px;
+  height: 110px;
 }
 
-#bootstrap-overrides span {
-    font-size: 1em;
-    color: #808080;
+#bootstrap-overrides h1 {
+  margin-top: 0;
+  padding-top: 30px;
+  font-family: 'Fredoka One', cursive;
 }
 
-input {
-  display: inline-block;
-  width: 50%;
+#bootstrap-overrides h3 {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: 300;
+  margin-top: 30px;
 }
 
-.game-board {
+.hero {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.top-section {
+  padding-top: 16px;
+}
+
+.helper-text {
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 100;
+  padding: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.play-box {
+  background-color: #c7254e;
+}
+
+.love {
+  color: #c7254e;
+  font-size: 3em;
+  display:block;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+p {
+  font-size: 1.3em;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: grey;
+  /*padding: 20px;*/
+  color: #6f6f6f;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+#game-board {
   display: block;
   max-width: 50%;
   margin: 0 auto;
+  vertical-align: middle;
+  color: #c7254e;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.title {
+  text-align: center;
+  color: #f9f2f4;
 }
 
 .col {
+  height: 70px;
   float: left;
   display: inline-block;
   width: 30%;
   padding-bottom: 15%;
   padding-top: 15%;
-  margin: 1px;
-  background-color: darksalmon;
+  margin: 2px;
+  background-color: #f9f2f4;
   text-align: center;
+}
+
+.top-row {
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.middle-row {
+  margin: 0 auto;
+}
+
+.bottom-row {
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.player-scores h3 {
+  color: #f9f2f4;
+}
+
+
+/*Tablets*/
+@media (max-width: 761px) {
+  .player-scores {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0;
+  }
+}
+
+/*Up to iPhone 6+*/
+@media (max-width: 414px) {
+  #bootstrap-overrides h1 {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-small p {
+    font-size: 1em;
+    font-weight: 300;
+    padding: 5px;
+  }
+  .love {
+    display: none;
+  }
+  .small-drop {
+    padding: 0;
+    bottom: 0;
+  }
+  .smaller-screen {
+    border-top: 1px solid #f9f2f4;
+    line-height: 2;
+  }
+}
+
+footer {
+  margin: 20px
+}
+
+footer p {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-size: .9em;
+  line-height: normal;
 }

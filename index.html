@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="naughts.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+  <title>Naughts and Crosses</title>
+</head>
+<body id="bootstrap-overrides">
+
+  <header class="page-header">
+    <h1>Naughts <span class="glyphicon glyphicon-asterisk"> </span> Crosses<br>
+  </header>
+
+  <div class="container-fluid hero-small">
+    <p class="hero">Welcome to Naughts and Crosses, a game requiring extreme skill and strategy. Here is how you play</p>
+      <div class="row top-section">
+        <div class="col-sm-4 help">
+          <span class="glyphicon glyphicon-heart love"></span>
+          <p class="helper-text">Find a friend to play with (your imaginary one is fine of course).</p>
+        </div>
+        <div class="col-sm-4 help">
+          <span class="glyphicon glyphicon-hand-right love"></span>
+          <p class="helper-text">Decide who will be naughts, and who will take crosses.</p>
+        </div>
+        <div class="col-sm-4 help">
+          <span class="glyphicon glyphicon-certificate love"></span>
+          <p class="helper-text">Play to the best of three to decide the ultimate champion.</p>
+        </div>
+      </div>
+  </div>
+
+
+<div class="container-fluid play-box">
+  <div class="row">
+
+    <div class="col-sm-8">
+      <h3 class="title">Game Board</h3>
+      <div id="game-board">
+        <div class="row top-row">
+          <div class="col" id="0"></div>
+          <div class="col" id="1"></div>
+          <div class="col" id="2"></div>
+        </div>
+        <div class="row middle-row">
+          <div class="col" id="3"></div>
+          <div class="col" id="4"></div>
+          <div class="col" id="5"></div>
+        </div>
+        <div class="row bottom-row">
+          <div class="col" id="6"></div>
+          <div class="col" id="7"></div>
+          <div class="col" id="8"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4 small-drop">
+      <div class="player-scores">
+        <h3 class="smaller-screen scoring-font">First Player</h3>
+        <code id="starter"></code>
+        <h3>Player Scores</h3>
+        <code>Player X Score:<span id="player-X"></span></code><br>
+        <code>Player O Score:<span id="player-O"></span></code>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>
+    Made with <span class="glyphicon glyphicon-heart"></span> by Christie Metson
+  </p>
+  <p>
+    <span class="glyphicon glyphicon-console"></span>
+    General Assembly Web Development Immersive Project One
+  </p>
+</footer>
+
+<script src="naughts.js" charset="utf-8"></script>
+</body>
+</html>
