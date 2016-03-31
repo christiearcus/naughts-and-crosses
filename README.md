@@ -1,19 +1,21 @@
-### Naughts & Crosses
+### Rockets & Fighter Jets!
 
-Welcome to my wonderful game of naughts & crosses. If you were raised by wolves, here is a simple guide to playing:
+Welcome to my wonderful game of Rockets & Fighter Jets. Not to be mistaken with Naughts & Crosses. If you were raised by wolves, here is a simple guide to playing:
 
 1. Grab a partner to play with :dancers:
-2. Open [ ADD URL HERE ]
-3. Pick a side (naughts or crosses)
-4. Each taking a turn, the aim is to get yourself a line (vertical, horizontal or diagonal) before the other player
-5. Repeat lots of times, or until one person becomes a smug winner :poop:
+2. Open http://christiearcus.github.io/naughts-and-crosses/
+5. Play lots of times, or until one person becomes a smug winner :poop:
 
 Enjoy!
 
 ### Technologies used
 
-This browser based game is developed in Javascript. [ ADD MORE ONCE BUILT ]
+This browser based game is developed in Javascript, CSS and HTML.
 
-### Wireframes
+The Javascript is custom built (i.e. no libraries were used), but the front end uses Bootstrap 3 for it's responsive grid and some glyphicons. The game tokens are from Font Awesome.
 
-You can view wireframes here [ ADD WIREFRAME LINKS ]
+I also played around with flex-boxes for the game-grid, but in the end ran out of time for integration in to the project. Will be something I do as an enhancement.
+
+### Wireframe
+
+![Wireframe](wireframe.jpg)

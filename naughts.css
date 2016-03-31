@@ -23,7 +23,7 @@
 .hero {
   font-family: "Lucida Console", Monaco, monospace;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 2em;*/
   text-align: center;
   color: black;
   padding: 20px;
@@ -40,10 +40,6 @@
   font-weight: 100;
   padding: 20px;
   font-family: "Lucida Console", Monaco, monospace;
-}
-
-.play-box {
-  background-color: #c7254e;
 }
 
 .love {
@@ -73,6 +69,10 @@ p {
   font-family: "Lucida Console", Monaco, monospace;
 }
 
+.play-box {
+  background-color: #c7254e;
+}
+
 .title {
   text-align: center;
   color: #f9f2f4;
@@ -88,6 +88,9 @@ p {
   margin: 2px;
   background-color: #f9f2f4;
   text-align: center;
+}
+
+.fa-rocket {
   color: cadetblue;
 }
 
@@ -153,7 +156,7 @@ p {
 }
 
 footer {
-  margin: 20px
+  margin: 20px;
 }
 
 footer p {
