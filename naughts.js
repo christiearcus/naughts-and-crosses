@@ -108,10 +108,10 @@ var clearBoard = function() {
 
 var endGame = function() {
   if (playerX === 3) {
-    window.location.reload();
+    document.getElementById('ultimate-champ').className =  "alert alert-warning alert-dismissible winner-alert";
   }
   else if (playerO === 3) {
-    window.location.reload();
+    document.getElementById('ultimate-champ').className =  "alert alert-warning alert-dismissible winner-alert";
   }
   else {
     return;
