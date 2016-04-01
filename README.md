@@ -12,7 +12,7 @@ Enjoy!
 
 This browser based game is developed in Javascript, CSS and HTML.
 
-The Javascript is custom built (i.e. no libraries were used), but the front end uses Bootstrap 3 for it's responsive grid and some glyphicons. The game tokens are from Font Awesome.
+The game logic is mostly built with hand coded Javascript :gift_heart:. There is a tiny bit of jQuery involved with the dismissing of alerts. The front end uses Bootstrap 3 for it's responsive grid and some glyphicons. The game tokens are from Font Awesome.
 
 I also played around with flex-boxes for the game-grid, but in the end ran out of time for integration in to the project. Will be something I do as an enhancement.
 
