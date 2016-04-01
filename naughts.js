@@ -38,6 +38,13 @@ var gameBoardUI = document.getElementById('game-board');
 gameBoardUI.addEventListener('click', function(event) {
   var index = Number(event.target.id);
   var index2 = event.target.id;
+  var indexClass = event.target.className;
+
+  if (indexClass !== "col") {
+    alert('you cant click on the same space twice');
+    return;
+  }
+
     if (move === 'X') {
       document.getElementById(index2).className = "col fa fa-fighter-jet fa-3x";
       gameGrid[index] = move;
