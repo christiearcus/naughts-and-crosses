@@ -41,7 +41,7 @@ gameBoardUI.addEventListener('click', function(event) {
   var indexClass = event.target.className;
 
   if (indexClass !== "col") {
-    alert('you cant click on the same space twice');
+    $('#override-modal').modal('toggle');
     return;
   }
 

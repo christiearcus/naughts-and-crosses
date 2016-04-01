@@ -1,3 +1,5 @@
+/*Bootstrap tweaks*/
+
 #bootstrap-overrides header {
   margin-top: 0;
   margin-bottom: 0;
@@ -20,10 +22,12 @@
   margin-top: 30px;
 }
 
+/*Core Styles*/
+
 .hero {
   font-family: "Lucida Console", Monaco, monospace;
   font-weight: 300;
-  font-size: 2em;*/
+  font-size: 2em;
   text-align: center;
   color: black;
   padding: 20px;
@@ -52,9 +56,7 @@
 
 p {
   font-size: 1.3em;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: grey;
-  /*padding: 20px;*/
   color: #6f6f6f;
   font-weight: 200;
   line-height: 1.8;
@@ -132,6 +134,10 @@ p {
   margin: 10px;
 }
 
+.my-modal {
+  font-family: "Lucida Console", Monaco, monospace;
+  border-style: none;
+}
 
 /*Tablets*/
 @media (max-width: 761px) {
@@ -166,6 +172,8 @@ p {
     line-height: 2;
   }
 }
+
+/*Footer styles*/
 
 footer {
   margin: 20px;
